@@ -1,0 +1,339 @@
+/* style header, nav, and footer */
+header, footer{
+    background-color:#fcf7ffff;
+    color: #655560ff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 10px;
+    margin: 0;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header h1{
+    color:#655560ff;
+    opacity: 1.0;
+    font-size: 3rem;
+    text-align: center;
+}
+
+header a:visited{
+    color:#655560ff;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav li{
+    padding: 8px;
+    border: 2px solid #c4cad0ff;
+}
+
+nav li:active{
+    border: 2px #c4cad0ff dotted;
+    text-decoration: underline;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+/* skip to content button */
+.skip a {
+    position: absolute;
+    top: -200px;
+}
+
+.skip a:focus {
+    position: absolute;
+    top: 0px;
+}
+
+/* styling main content of page */
+p, h2 {
+    padding: 2px;
+    margin: 5px;
+    line-height: 2;
+}
+main {
+    color:#fcf7ffff;
+    background-color: #655560ff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.eyes{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    opacity: 0.7;
+}
+
+/* styling a gallery using grid */
+.band_gallery{
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.josh {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow:scroll;
+  } 
+   
+  .jake {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow:scroll;
+  }
+  
+  .sam {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow:scroll;
+  }
+  
+  .danny {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow:scroll;
+  }
+
+.name {
+    grid-area: 1/1/2/2;
+    text-align: center;
+    align-self: center;
+    margin: 6px;
+}
+
+.role{
+    grid-area: 1/1/2/2;
+    text-align: center;
+    align-self: end;
+    margin: 6px;
+}   
+
+main h2{
+    font-size: 3rem;
+}
+main h3{
+    font-style: italic;
+    font-size: 2rem;
+    color:  #c4cad0ff;
+}
+
+.title_gallery, .mid_gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: black;
+} 
+
+.title_gallery img{
+    width: 25%;
+}
+/* style topic text of the page to lay over the 4 pictures as a background */
+.topic_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #655560ff;
+    color: #c4cad0ff;
+    border: solid 3px #fcf7ffff;
+    font-size: 2rem;
+  }
+/* styling a gallery of 9 images using flex */
+.about_gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_gallery img{
+    width: 50%;
+}
+
+.textbox2 p:nth-child(2){
+    font-style: italic;
+}
+
+
+.music_gallery{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.FTF{
+    grid-area: 1/ 1/ 2/ 3;
+}
+
+.APA{
+    grid-area: 2/ 1/ 3/ 3;
+}
+
+.BGG{
+    grid-area: 3/ 1/ 4/ 3;
+} 
+
+.FTF, .APA, .BGG{
+    display: grid;
+}
+
+.FTF h3, .APA h3, .BGG h3{
+    grid-area: 1 / 1/ 2/ 3;
+    text-align: center;
+    border: 2px #c4cad0ff solid;
+}
+
+.FTF figure, .APA figure, .BGG figure{
+    grid-area: 2 / 1 / 3 / 3;
+    width: 300px;
+    margin: 5px;
+    justify-self: center;
+}
+
+.FTF figcaption, .APA figcaption, .BGG figcaption{
+    text-align: center;
+}
+
+.FTF blockquote, .APA blockquote, .BGG blockquote{
+    grid-area:  3/ 1/ 4/ 3;
+    text-align: center;
+    align-self: center;
+    font-size: 18px;
+    margin: 10px 20px;
+    line-height: 2;
+}
+
+.FTF ol, .APA ol, .BGG ol{
+    grid-area: 2 / 2 / 3 / 3;
+    justify-self: center;
+    margin: 10px 20px;
+}
+
+/* media query for tablet view */
+@media screen and (min-width: 600px){
+
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .eyes {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .topic_text{
+        padding: 2% 5%;
+    }
+
+    .mid_gallery{
+        overflow: hidden;
+    }
+
+    .about_gallery img{
+        width: 33%;
+    }
+
+    .about_gallery:last-child{
+        display: hidden;
+    }
+
+    .josh  {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr)
+      }
+      
+    .jake {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr)
+      }
+      
+    .sam {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr)
+      }
+      
+    .danny {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr)
+      }
+
+
+    .name{
+        grid-area: 1/1/2/4;
+        margin: 5px;
+        text-align: left;
+      }
+
+    .role{
+        grid-area: 1/4/2/6;
+        text-align: right;
+        align-self: center;
+        margin: 5px;
+      }
+
+      .FTF blockquote, .APA blockquote, .BGG blockquote{
+          font-size: 16px;
+      }
+    }
+/* media query for desktop view */
+@media screen and (min-width: 900px){
+    
+    .topic_text{
+        font-size: 3rem;
+    }
+
+    .mid_gallery{
+        overflow: hidden;
+    }
+
+    .about_gallery img{
+        width: 20%;
+    }
+    .FTF figure, .APA figure, .BGG figure{
+        grid-area: 2 / 1 / 4 / 2;
+        width: 290px;
+        margin: 5px;
+    }
+    
+    .FTF figcaption, .APA figcaption, .BGG figcaption{
+        text-align: center;
+    }
+    
+    .FTF blockquote, .APA blockquote, .BGG blockquote{
+        grid-area:  2/ 2/ 4/ 3;
+        text-align: center;
+        align-self: center;
+        font-size: 20px;
+        margin: 10px 20px;
+        line-height: 2;
+    }
+    
+    .FTF ol, .APA ol, .BGG ol{
+        grid-area: 2 / 2 / 3 / 3;
+        justify-self: center;
+        margin: 10px 20px;
+    }
+} 
+
+
+/* colors */
+/* --magnolia: #fcf7ffff;
+--silver-sand: #c4cad0ff;
+--battleship-grey: #878c8fff;
+--heliotrope-gray: #a4969bff;
+--dark-liver: #655560ff; */
