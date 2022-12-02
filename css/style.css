@@ -41,6 +41,12 @@ nav li:active{
     text-decoration: underline;
 }
 
+.tablink[aria-current='page']{
+    border: 2px #c4cad0ff dotted;
+    text-decoration: underline;
+    background-color:#c4cad0ff ;
+}
+
 nav a{
     text-decoration: none;
 }
@@ -164,10 +170,16 @@ main h3{
     width: 50%;
 }
 
+.title_gallery img{
+    width: 25%;
+}
+
+.mid_gallery img{
+    width: 17%;
+}
 .textbox2 p:nth-child(2){
     font-style: italic;
 }
-
 
 .music_gallery{
     display: grid;
