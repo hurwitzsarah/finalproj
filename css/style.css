@@ -183,43 +183,44 @@ main h3{
 
 .music_gallery{
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-rows: repeat(3, 1fr);
 }
 
-.FTF{
+.ftf{
     grid-area: 1/ 1/ 2/ 3;
 }
 
-.APA{
+.apa{
     grid-area: 2/ 1/ 3/ 3;
 }
 
-.BGG{
+.bgg{
     grid-area: 3/ 1/ 4/ 3;
 } 
 
-.FTF, .APA, .BGG{
+.ftf, .apa, .bgg{
     display: grid;
+    grid-template-rows: 1fr 6fr;
 }
 
-.FTF h3, .APA h3, .BGG h3{
+.ftf h3, .apa h3, .bgg h3{
     grid-area: 1 / 1/ 2/ 3;
     text-align: center;
     border: 2px #c4cad0ff solid;
 }
 
-.FTF figure, .APA figure, .BGG figure{
+.ftf figure, .apa figure, .bgg figure{
     grid-area: 2 / 1 / 3 / 3;
     width: 300px;
     margin: 5px;
     justify-self: center;
 }
 
-.FTF figcaption, .APA figcaption, .BGG figcaption{
+.ftf figcaption, .apa figcaption, .bgg figcaption{
     text-align: center;
 }
 
-.FTF blockquote, .APA blockquote, .BGG blockquote{
+.ftf blockquote, .apa blockquote, .bgg blockquote{
     grid-area:  3/ 1/ 4/ 3;
     text-align: center;
     align-self: center;
@@ -228,7 +229,7 @@ main h3{
     line-height: 2;
 }
 
-.FTF ol, .APA ol, .BGG ol{
+.ftf ol, .apa ol, .bgg ol{
     grid-area: 2 / 2 / 3 / 3;
     justify-self: center;
     margin: 10px 20px;
@@ -260,10 +261,6 @@ main h3{
         width: 33%;
     }
 
-    .about_gallery:last-child{
-        display: hidden;
-    }
-
     .josh  {
         display: grid;
         grid-template-columns: repeat(5, 1fr)
@@ -284,7 +281,9 @@ main h3{
         grid-template-columns: repeat(5, 1fr)
       }
 
-
+      .ftf, .apa, .bgg{
+        grid-template-columns: 1fr 3fr;
+    }
     .name{
         grid-area: 1/1/2/4;
         margin: 5px;
@@ -298,7 +297,7 @@ main h3{
         margin: 5px;
       }
 
-      .FTF blockquote, .APA blockquote, .BGG blockquote{
+      .ftf blockquote, .apa blockquote, .bgg blockquote{
           font-size: 16px;
       }
     }
@@ -316,17 +315,17 @@ main h3{
     .about_gallery img{
         width: 20%;
     }
-    .FTF figure, .APA figure, .BGG figure{
+    .ftf figure, .apa figure, .bgg figure{
         grid-area: 2 / 1 / 4 / 2;
         width: 290px;
         margin: 5px;
     }
     
-    .FTF figcaption, .APA figcaption, .BGG figcaption{
+    .ftf figcaption, .apa figcaption, .bgg figcaption{
         text-align: center;
     }
     
-    .FTF blockquote, .APA blockquote, .BGG blockquote{
+    .ftf blockquote, .apa blockquote, .bgg blockquote{
         grid-area:  2/ 2/ 4/ 3;
         text-align: center;
         align-self: center;
@@ -335,7 +334,7 @@ main h3{
         line-height: 2;
     }
     
-    .FTF ol, .APA ol, .BGG ol{
+    .ftf ol, .apa ol, .bgg ol{
         grid-area: 2 / 2 / 3 / 3;
         justify-self: center;
         margin: 10px 20px;
